@@ -70,3 +70,4 @@ const store = createStoreWithFirebase(
 
 export default store;
 // window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ instead of window.__REDUX_DEVTOOLS_EXTENSION__
+// window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()
