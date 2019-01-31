@@ -142,10 +142,10 @@ a.socialIcon:hover, .socialHoverClass {
     transition: all 0.8s;
 }
 
-html {
+/* html {
     overflow: scroll;
     overflow-x: hidden;
-}
+} */
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
