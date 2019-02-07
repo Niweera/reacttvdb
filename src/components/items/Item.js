@@ -35,7 +35,7 @@ class Item extends Component {
             <li className="list-group-item list-group-item-dark text-left mt-1" id="mainBlock">
                 <a href={link} rel="noopener noreferrer" target="_blank">{tvname}</a>{' '}
                 <i onClick={() => this.setState({showInfo: !this.state.showInfo})} className="fas fa-sort-down" style={{color: 'white', cursor: 'pointer'}}></i>
-                {isAuthenticated ? (<Link rel="noopener noreferrer" target="_blank" to={`edit/${uuid}`}>
+                {isAuthenticated ? (<Link  to={`edit/${uuid}`}>
                     <i className="fas fa-pencil-alt" style={{cursor:'pointer', float: 'right', marginRight: '1rem', color: 'white'}}></i>
                 </Link>) : null}
                 {showInfo ? (<div className="container mt-3 mb-2">

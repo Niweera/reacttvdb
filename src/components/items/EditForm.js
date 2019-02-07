@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import Spinner from '../layout/Spinner';
 import PropTypes from 'prop-types';
+import { actionTypes } from 'redux-firestore';
 
 class EditForm extends Component {
     state = {
@@ -117,13 +118,16 @@ class EditForm extends Component {
         }
     };
 
+    componentWillUnmount() {
+      this.props.dispatch({ type: actionTypes.CLEAR_DATA, preserve: { data: ['tvdb'], ordered: ['tvdb'] } });
+    }
+
     render() {
         const { errors, showMessage } = this.state;
         const { item } = this.props;
-
+        
         if (item){
         const { tvid, tvname, showtype, link, places, remarks } = item;
-
         return (
           <div className="container">
             <div className="container mt-2">
@@ -239,7 +243,7 @@ class EditForm extends Component {
             </div>}
           </div>
         );
-        }else{
+      }else{
           return <Spinner/>;
         }
     }
